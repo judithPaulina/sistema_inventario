@@ -1,0 +1,80 @@
+<div>
+  <div class="center">
+    <div class="container-table">
+      <p-toolbar>
+        <div class="layout-button">
+          <button pButton pRipple type="button" icon="icon-create" pTooltip="Crear" tooltipPosition="top"
+          (click)="show()" ></button>
+        </div>
+      </p-toolbar>
+      <p-table   [columns]="cols" [rows]="10" [paginator]="true">
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th *ngFor="let col of columns">
+              {{col.header}}
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+          <tr [pSelectableRow]="rowData">
+            <td *ngFor="let col of columns">
+              {{rowData[col.field]}}
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+</div>
+
+<p-dialog [(visible)]="viewsCreateEdit" [styleClass]="'p-dialog-body p-col-11 p-md-8 p-lg-6 p-xl-5'" [modal]="true">
+  <ng-template pTemplate="header">
+    <h3 class="title-dialogo center">
+      <em class="icon-user"></em>
+      <span>Crear usuario</span>
+    </h3>
+  </ng-template>
+  <p-divider></p-divider>
+  <ng-template pTemplate="body">
+    <form >
+          <div class="p-fluid p-col-12 p-md-12 p-lg-8 p-grid">
+            <div class="p-col-12 p-md-12 p-lg-12 p-xl-4">
+              <span class="p-float-label">
+                <input type="text" pInputText class="input-form" formControlName="client_name">
+                <label>Nombre<span class="required-field">*</span></label>
+              </span>
+            </div>
+            <div class="p-col-12 p-md-12 p-lg-12 p-xl-4">
+              <span class="p-float-label">
+                <input type="text" pInputText class="input-form" formControlName="client_type">
+                <label>Edad<span class="required-field">*</span></label>
+              </span>
+            </div>
+            <div class="p-col-12 p-md-12 p-lg-12 p-xl-4">
+              <span class="p-float-label">
+                <input type="text" pInputText class="input-form" formControlName="client_description">
+                <label>Fecha de ingreso<span class="required-field">*</span></label>
+              </span>
+            </div>
+          </div>
+
+          <div class="p-fluid p-col-12 p-md-12 p-lg-12 p-grid">
+            <div class="p-col-12 p-md-12 p-lg-6 p-xl-4">
+              <span class="p-float-label">
+                <p-dropdown optionLabel="value" placeholder="Seleccionar Cargo"
+                formControlName="client_status" appendTo="body"></p-dropdown>
+              </span>
+            </div>
+          </div>
+    </form>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <p-divider></p-divider>
+    <div class="center">
+      <p-button label="Guardar" (click)="saveOrEdit()" ></p-button>
+    </div>
+  </ng-template>
+</p-dialog>
+
+
+

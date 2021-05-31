@@ -1,0 +1,71 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: $white;
+  font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+}
+
+
+// for menu
+.layout-container {
+  height: 340px;
+  background: $degradient-font;
+}
+
+.layout-menu {
+  height: 90px;
+  width: 97%;
+  background: $white;
+  margin: 140px 25px 0 25px;
+}
+
+.layout-modules{
+  height: 100%;
+  width: 33.33%;
+  border: 2px solid $black;
+  cursor: pointer;
+}
+
+.layout-text {
+  font-weight: 500;
+  font-size: 30px;
+  margin-top: 5%;
+}
+
+span {
+  margin-left: 34%;
+}
+
+.layout-icons {
+  width: 52px;
+  height: 52px;
+  background: $primary-color;
+  color: $white;
+  border-radius: 100%;
+  margin-top: 3%;
+  margin-left: 24%;
+}
+// for user
+.layout-user {
+  color: $white;
+  font-weight: 400;
+  padding: 10px;
+}
+
+// for general
+[class^="icon-"] {
+  font-size: 30px;
+  padding-top: 19%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.derecha {
+  display: flex;
+  justify-content: flex-end;
+}
+

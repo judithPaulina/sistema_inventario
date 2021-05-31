@@ -1,0 +1,30 @@
+.p-col-1,
+.p-col-2,
+.p-col-3,
+.p-col-4,
+.p-col-5,
+.p-col-6,
+.p-col-7,
+.p-col-8,
+.p-col-9,
+.p-col-10,
+.p-col-11,
+.p-col-12 {
+    float: left;
+    box-sizing: border-box;
+}
+
+.p-col-1.p-grid,
+.p-col-2.p-grid,
+.p-col-3.p-grid,
+.p-col-4.p-grid,
+.p-col-5.p-grid,
+.p-col-6.p-grid,
+.p-col-7.p-grid,
+.p-col-8.p-grid,
+.p-col-9.p-grid,
+.p-col-10.p-grid,
+.p-col-11.p-grid,
+.p-col-12.p-grid {
+    display: block;
+}

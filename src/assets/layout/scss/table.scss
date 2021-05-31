@@ -1,0 +1,48 @@
+//for toolbar
+.p-button {
+  background: $primary-color;
+  border-radius: 20%;
+  border: none;
+}
+
+.p-button:enabled:active {
+  background: $secondary-color !important;
+  border-color: $white !important;
+}
+
+.p-button:enabled:hover {
+  background: $secondary-color !important;
+  border-color: $white !important;
+}
+.p-button:focus {
+  box-shadow: none !important;
+}
+
+.layout-button {
+  margin-left: 98%;
+}
+
+// for table
+.container-table {
+  margin-top: 20px;
+  width: 90%;
+  border: 1px solid $text-color;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  background: $primary-color !important;
+  color: $white !important;
+  text-align: center;
+}
+
+// for paginator
+span.p-paginator-pages {
+  margin-left: 0px !important;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  background: $primary-color;
+  opacity: 0.6;
+  border-radius: 100%;
+  color: $white;
+}
